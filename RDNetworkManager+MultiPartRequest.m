@@ -40,10 +40,10 @@
     
     NSURLSessionUploadTask *uploadTask = [self.uploadManager uploadTaskWithStreamedRequest:request progress:&progress completionHandler:^(NSURLResponse *response, id responseObject, NSError *error) {
         if (error && failure) {
-            NSLog(@"TTNetworkAdapter: FAILURE\nURL:%@ \nMETHOD:%@ \nPARAMS:\n%@ \nError: %@", URL,@"POST",params, error);
+            NSLog(@"RDNetworkAdapter: FAILURE\nURL:%@ \nMETHOD:%@ \nPARAMS:\n%@ \nError: %@", URL,@"POST",params, error);
             failure(uploadTask, error);
         } else {
-            NSLog(@"TTNetworkAdapter: SUCCESS\nURL:%@ \nMETHOD:%@ \nPARAMS:\n%@\nResponse:%@", URL,@"POST",params,responseObject);
+            NSLog(@"RDNetworkAdapter: SUCCESS\nURL:%@ \nMETHOD:%@ \nPARAMS:\n%@\nResponse:%@", URL,@"POST",params,responseObject);
             
             if (aClass && [aClass isSubclassOfClass:MTLModel.class] &&[aClass conformsToProtocol:@protocol(MTLJSONSerializing)])
             {
@@ -105,10 +105,10 @@
     
     NSURLSessionUploadTask *uploadTask = [self.uploadManager uploadTaskWithStreamedRequest:request progress:&progress completionHandler:^(NSURLResponse *response, id responseObject, NSError *error) {
         if (error && failure) {
-            NSLog(@"TTNetworkAdapter: FAILURE\nURL:%@ \nMETHOD:%@ \nPARAMS:\n%@ \nError: %@", URL,@"POST",params, error);
+            NSLog(@"RDNetworkAdapter: FAILURE\nURL:%@ \nMETHOD:%@ \nPARAMS:\n%@ \nError: %@", URL,@"POST",params, error);
             failure(uploadTask, error);
         } else {
-            NSLog(@"TTNetworkAdapter: SUCCESS\nURL:%@ \nMETHOD:%@ \nPARAMS:\n%@\nResponse:%@", URL,@"POST",params,responseObject);
+            NSLog(@"RDNetworkAdapter: SUCCESS\nURL:%@ \nMETHOD:%@ \nPARAMS:\n%@\nResponse:%@", URL,@"POST",params,responseObject);
             success(uploadTask ,responseObject);
         }
     }];
