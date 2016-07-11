@@ -12,7 +12,7 @@
 #import <objc/message.h>
 #import <objc/runtime.h>
 
-#define TTNetworkAdapterDebug 1
+#define RDNetworkAdapterDebug 1
 
 @implementation RDNetworkManager
 
